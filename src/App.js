@@ -4,6 +4,7 @@ import arrow from "./assets/img/arrow.svg";
 import radial from "./assets/img/radial.svg";
 import { useState, useEffect, useRef } from "react";
 import chroma from "chroma-js";
+import Button from "./Button";
 
 function App() {
   const [color1, setColor1] = useState("#FF6347");
@@ -126,104 +127,11 @@ function App() {
         </h2>
 
         <div className="flex items-center justify-center p-2 gap-2 flex-wrap md:gap-5">
-          <button
-            className="srcircle"
-            title="to top"
-            onClick={() => changeOrientation("to top")}
-          >
-            <img src={arrow} alt="arrow to top" />
-          </button>
-
-          <button
-            className="srcircle"
-            title="to right top"
-            onClick={() => changeOrientation("to right top")}
-          >
-            <img
-              src={arrow}
-              alt="arrow to right top"
-              className="transform rotate-45"
-            />
-          </button>
-
-          <button
-            className="srcircle"
-            title="to right"
-            onClick={() => changeOrientation("to right")}
-          >
-            <img
-              src={arrow}
-              alt="arrow to right"
-              className="transform rotate-90"
-            />
-          </button>
-
-          <button
-            className="srcircle"
-            title="to right bottom"
-            onClick={() => changeOrientation("to right bottom")}
-          >
-            <img
-              src={arrow}
-              alt="arrow to right bottom"
-              className="rotate-135"
-            />
-          </button>
-
-          <button
-            className="srcircle"
-            title="to bottom"
-            onClick={() => changeOrientation("to bottom")}
-          >
-            <img
-              src={arrow}
-              alt="arrow to bottom"
-              className="transform rotate-180"
-            />
-          </button>
-
-          <button
-            className="srcircle"
-            title="to bottom left"
-            onClick={() => changeOrientation("to bottom left")}
-          >
-            <img
-              src={arrow}
-              alt="arrow to bottom left"
-              className="rotate-225"
-            />
-          </button>
-
-          <button
-            className="srcircle"
-            title="to left"
-            onClick={() => changeOrientation("to left")}
-          >
-            <img
-              src={arrow}
-              alt="arrow to left"
-              className="transform -rotate-90"
-            />
-          </button>
-
-          <button
-            className="srcircle"
-            title="to left top"
-            onClick={() => changeOrientation("to left top")}
-          >
-            <img
-              src={arrow}
-              alt="arrow to left top"
-              className="transform rotate-180"
-            />
-          </button>
-
-          <button
-            className="srcircle"
-            onClick={() => changeOrientation("circle")}
-          >
-            <img src={radial} alt="radial" className="px-1.5" />
-          </button>
+          <Button
+            arrow={arrow}
+            radial={radial}
+            changeOrientation={changeOrientation}
+          />
         </div>
 
         <h2 className="text-xl text-white text-center py-3 mt-5 italic font-cursive">
@@ -237,7 +145,7 @@ function App() {
           <form className="flex gap-5 justify-center items-center flex-wrap">
             <input
               type="color"
-              ref={hex}
+              //   ref={hex}
               defaultValue={color1}
               style={icolor1}
               className="rounded text-center shadow-2xl w-28 h-12"
