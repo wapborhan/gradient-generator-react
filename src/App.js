@@ -208,21 +208,23 @@ function App() {
         <div className="flex items-center justify-center flex-wrap">
           <form className="flex gap-5 justify-center items-center flex-wrap">
             <input
-              type="text"
+              type="color"
               ref={hex}
               defaultValue={color1}
               style={icolor1}
-              className="rounded px-2 py-3 text-center shadow-2xl font-bold bg-red-900"
+              className="rounded  text-center shadow-2xl font-bold bg-red-900"
               name="hex"
+              onChange={(e) => setColor1(e.target.value)}
             />
 
             <input
-              type="text"
+              type="color"
               ref={hex2}
               defaultValue={color2}
               style={icolor2}
-              className="rounded px-2 py-3 text-center shadow-2xl font-bold bg-red-700"
+              className="rounded  text-center shadow-2xl font-bold bg-red-700"
               name="hex2"
+              onChange={(e) => setColor2(e.target.value)}
             />
 
             <input type="submit" className="hidden" onClick={(e) => doJob(e)} />
