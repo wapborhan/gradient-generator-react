@@ -16,6 +16,8 @@ function App() {
   const [error, setError] = useState("");
   const [invertedcolor1, setinvertedColor1] = useState("");
   const [invertedcolor2, setinvertedColor2] = useState("");
+  const [copySuccess, setCopySuccess] = useState("");
+  const textAreaRef = useRef(null);
   const hex = useRef(color1);
   const hex2 = useRef(color2);
 
@@ -101,6 +103,15 @@ function App() {
   const icolor1 = { background: color1, color: invertedcolor1 };
   const icolor2 = { background: color2, color: invertedcolor2 };
 
+  function copyToClipboard(e) {
+    textAreaRef.current.select();
+    document.execCommand("copy");
+    // This is just personal preference.
+    // I prefer to not show the whole text area selected.
+    e.target.focus();
+    setCopySuccess(alert("Copied"));
+  }
+
   return (
     <div
       className="flex items-center bg-gray-900 justify-center md:fixed h-screen inset-0 px-10"
@@ -115,11 +126,16 @@ function App() {
         </h2>
 
         <div className="flex items-center justify-center p-2 gap-2 flex-wrap md:gap-5">
-          <button title="to top" onClick={() => changeOrientation("to top")}>
+          <button
+            className="srcircle"
+            title="to top"
+            onClick={() => changeOrientation("to top")}
+          >
             <img src={arrow} alt="arrow to top" />
           </button>
 
           <button
+            className="srcircle"
             title="to right top"
             onClick={() => changeOrientation("to right top")}
           >
@@ -131,6 +147,7 @@ function App() {
           </button>
 
           <button
+            className="srcircle"
             title="to right"
             onClick={() => changeOrientation("to right")}
           >
@@ -142,6 +159,7 @@ function App() {
           </button>
 
           <button
+            className="srcircle"
             title="to right bottom"
             onClick={() => changeOrientation("to right bottom")}
           >
@@ -153,6 +171,7 @@ function App() {
           </button>
 
           <button
+            className="srcircle"
             title="to bottom"
             onClick={() => changeOrientation("to bottom")}
           >
@@ -164,6 +183,7 @@ function App() {
           </button>
 
           <button
+            className="srcircle"
             title="to bottom left"
             onClick={() => changeOrientation("to bottom left")}
           >
@@ -174,7 +194,11 @@ function App() {
             />
           </button>
 
-          <button title="to left" onClick={() => changeOrientation("to left")}>
+          <button
+            className="srcircle"
+            title="to left"
+            onClick={() => changeOrientation("to left")}
+          >
             <img
               src={arrow}
               alt="arrow to left"
@@ -183,6 +207,7 @@ function App() {
           </button>
 
           <button
+            className="srcircle"
             title="to left top"
             onClick={() => changeOrientation("to left top")}
           >
@@ -193,13 +218,16 @@ function App() {
             />
           </button>
 
-          <button onClick={() => changeOrientation("circle")}>
+          <button
+            className="srcircle"
+            onClick={() => changeOrientation("circle")}
+          >
             <img src={radial} alt="radial" className="px-1.5" />
           </button>
         </div>
 
         <h2 className="text-xl text-white text-center py-3 mt-5 italic font-cursive">
-          Enter Colors & press Enter.
+          Choose Color
         </h2>
         <div className="text-white text-center py-2 rounded mb-3  text-white w-40 mx-auto">
           <h2 className="bg-amber-700">{error}</h2>
@@ -212,7 +240,7 @@ function App() {
               ref={hex}
               defaultValue={color1}
               style={icolor1}
-              className="rounded  text-center shadow-2xl font-bold bg-red-900"
+              className="rounded text-center shadow-2xl w-28 h-12"
               name="hex"
               onChange={(e) => setColor1(e.target.value)}
             />
@@ -222,7 +250,7 @@ function App() {
               ref={hex2}
               defaultValue={color2}
               style={icolor2}
-              className="rounded  text-center shadow-2xl font-bold bg-red-700"
+              className="rounded text-center shadow-2xl w-28 h-12"
               name="hex2"
               onChange={(e) => setColor2(e.target.value)}
             />
@@ -233,7 +261,23 @@ function App() {
 
         <div className="box md:w-[640px] w-[350px] h-auto mx-auto break-all mt-4 p-2 ">
           <p className="p-3 text-gray-200 font-mono text-base md:text-xl text-center font-semibold">
-            <span className="text-gray-100">background-image: </span> {cssCode}
+            <form>
+              <textarea
+                disabled
+                className="box md:w-[600px] w-[300px] h-auto mx-auto break-all mt-4 p-2 text-gray-100 outline-0"
+                ref={textAreaRef}
+                value={"background-image: " + cssCode}
+              />
+            </form>
+            <div>
+              <button
+                className="bg-transparent hover:bg-blue-500 text-black-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-full"
+                onClick={copyToClipboard}
+              >
+                Copy Code
+              </button>
+              {copySuccess}
+            </div>
           </p>
         </div>
       </div>
