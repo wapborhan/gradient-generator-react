@@ -7,6 +7,16 @@ const Button = (props) => {
     <Fragment>
       <button
         className="srcircle"
+        onClick={() => props.changeOrientation("conic")}
+      >
+        <img
+          src={props.radial}
+          alt="radial"
+          className="px-1.5 transform rotate-0"
+        />
+      </button>
+      <button
+        className="srcircle"
         title="to top"
         onClick={() => props.changeOrientation("to top")}
       >

@@ -64,6 +64,9 @@ function App() {
     if (ori === "circle") {
       setDirection("radial-gradient");
       setOrientation(ori);
+    } else if (ori === "conic") {
+      setDirection("conic-gradient");
+      setOrientation("from 1turn at 50% 50%");
     } else {
       setDirection("linear-gradient");
       setOrientation(ori);
