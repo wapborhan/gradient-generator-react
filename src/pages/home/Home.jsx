@@ -1,10 +1,12 @@
 import "./App.css";
-import "../../assets/tailwind.css";
+// import "../../assets/tailwind.css";
 import arrow from "../../assets/img/arrow.svg";
 import radial from "../../assets/img/radial.svg";
 import { useState, useEffect, useRef } from "react";
 import chroma from "chroma-js";
 import Button from "./Button";
+import Color from "./Color";
+import Code from "./Code";
 
 function Home() {
   const [color1, setColor1] = useState("#FF6347");
@@ -98,11 +100,11 @@ function Home() {
     }
   }
 
-  function doJob(e) {
-    e.preventDefault();
-    setColor1(hex.current.value);
-    setColor2(hex2.current.value);
-  }
+  // function doJob(e) {
+  //   e.preventDefault();
+  //   setColor1(hex.current.value);
+  //   setColor2(hex2.current.value);
+  // }
   //const boxOneStyle = { background: color1; color: }
   const icolor1 = { background: color1, color: invertedcolor1 };
   const icolor2 = { background: color2, color: invertedcolor2 };
@@ -117,79 +119,38 @@ function Home() {
   }
 
   return (
-    <div
-      className="flex items-center bg-gray-900 justify-center  h-screen inset-0 px-10"
-      style={ulStyle}
-    >
-      <div className="px-4 py-6">
-        <h1 className="md:text-5xl text-white font-extrabold text-center text-2xl">
-          Generate a CSS Color Gradient
-        </h1>
-        <h2 className="text-xl text-white text-center py-3 mt-2">
-          Choose orientation
-        </h2>
-
-        <div className="flex items-center justify-center p-2 gap-2 flex-wrap md:gap-5">
-          <Button
-            arrow={arrow}
-            radial={radial}
-            changeOrientation={changeOrientation}
-          />
-        </div>
-
-        <h2 className="text-xl text-white text-center py-3 mt-5 italic font-cursive">
-          Choose Color
-        </h2>
-        <div className="text-white text-center py-2 rounded mb-3  text-white w-40 mx-auto">
-          <h2 className="bg-amber-700">{error}</h2>
-        </div>
-
-        <div className="flex items-center justify-center flex-wrap">
-          <form className="flex gap-5 justify-center items-center flex-wrap">
-            <input
-              type="color"
-              //   ref={hex}
-              defaultValue={color1}
-              style={icolor1}
-              className="rounded text-center shadow-2xl w-28 h-12"
-              name="hex"
-              onChange={(e) => setColor1(e.target.value)}
-            />
-
-            <input
-              type="color"
-              ref={hex2}
-              defaultValue={color2}
-              style={icolor2}
-              className="rounded text-center shadow-2xl w-28 h-12"
-              name="hex2"
-              onChange={(e) => setColor2(e.target.value)}
-            />
-
-            <input type="submit" className="hidden" onClick={(e) => doJob(e)} />
-          </form>
-        </div>
-
-        <div className="box md:w-[640px] w-[350px] h-auto mx-auto break-all mt-4 p-2 ">
-          <p className="p-3 text-gray-200 font-mono text-base md:text-xl text-center font-semibold">
-            <form>
-              <textarea
-                disabled
-                className="box md:w-[600px] w-[300px] h-auto mx-auto break-all mt-4 p-2 text-gray-100 outline-0"
-                ref={textAreaRef}
-                value={"background-image: " + cssCode}
+    <div className="container-fluid topbarpt">
+      <div className="card text-center">
+        <div className="card-header  topbarpt" style={ulStyle}></div>
+        <div className="card-body">
+          <div className="row">
+            <div className="col-4">
+              <Color
+                error={error}
+                color1={color1}
+                icolor1={icolor1}
+                setColor1={setColor1}
+                color2={color2}
+                icolor2={icolor2}
+                setColor2={setColor2}
               />
-            </form>
-            <div>
-              <button
-                className="bg-transparent hover:bg-blue-500 text-black-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-full"
-                onClick={copyToClipboard}
-              >
-                Copy Code
-              </button>
-              {copySuccess}
             </div>
-          </p>
+            <div className="col-8">
+              <Button
+                arrow={arrow}
+                radial={radial}
+                changeOrientation={changeOrientation}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="card-footer p-0">
+          <Code
+            textAreaRef={textAreaRef}
+            cssCode={cssCode}
+            copyToClipboard={copyToClipboard}
+            copySuccess={copySuccess}
+          />
         </div>
       </div>
     </div>

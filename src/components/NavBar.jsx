@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { FaBars, FaUserCircle } from "react-icons/fa";
+import { FaBars, FaUserCircle, FaAlignLeft } from "react-icons/fa";
 
 const NavBar = (props) => {
   return (
@@ -12,17 +12,14 @@ const NavBar = (props) => {
           className="sidebars-button text-dark mr-auto"
           onClick={props.handleToggle}
         >
-          <FaBars />
+          {props.isActive ? <FaBars /> : <FaAlignLeft />}
           <div className={props.isActive ? "dashboard" : "dashboard-show"}>
-            Islam BD
+            SR Gradient
           </div>
         </div>
 
         <h2 id="nameTitle" className="text-center text-dark">
-          <span className="heabar">
-            {" "}
-            بِسْمِ اللَّـهِ الرَّ‌حْمَـٰنِ الرَّ‌حِيمِ
-          </span>{" "}
+          <span className="heabar"> CSS Gradient</span>{" "}
           {/* <span className="headbn">দয়াময় মেহেরবান আল্লাহর নামে</span> */}
         </h2>
         <div className="account ">

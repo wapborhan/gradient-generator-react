@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import sidenav from "./sidenav";
-import { FaQuran, FaInfoCircle } from "react-icons/fa";
+import { HiOutlineColorSwatch, HiInformationCircle } from "react-icons/hi";
 
 const Sidebar = (props) => {
   return (
@@ -14,8 +14,8 @@ const Sidebar = (props) => {
         }
       >
         <div className="logo-details">
-          <FaQuran />
-          <span className="logo_name">Islam BD</span>
+          <HiOutlineColorSwatch />
+          <span className="logo_name">SR Gradient</span>
         </div>
         <ul className="nav-links">
           {sidenav.map((data, idx) => (
@@ -31,9 +31,9 @@ const Sidebar = (props) => {
           <li className="log_out">
             <NavLink to="/about">
               <i className="fas fa-exclamation-triangle text-white">
-                <FaInfoCircle />
+                <HiInformationCircle />
               </i>
-              <span className="links_name">সাইট সম্পর্কে</span>
+              <span className="links_name">About</span>
             </NavLink>
           </li>
         </ul>

@@ -6,9 +6,10 @@ const Footer = () => {
     <footer className="mt-3">
       <div className="container py-3 ">
         <h6 id="nameTitle" className="text-center text-dark">
-          © {d.getFullYear()}. সর্বস্বত্ব সংরক্ষিত <strong>IslamBD</strong>
+          © {d.getFullYear()}. All rights reserved by{" "}
+          <strong>SR Gradient</strong>
           {"-"}
-          V.2.0 | সাইট ডিজাইন করেছেন{" "}
+          V.1.0 | Design BY{" "}
           <a
             className="text-decoration-none text-danger"
             href="https://www.srdreamlab.com"

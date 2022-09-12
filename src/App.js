@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./assets/stylesheet/sidebar.css";
-
 //Components
 import Sidebar from "./components/SideBar";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
-import { Home, GradientButton } from "./pages";
+import { Home, GradientButton, NotFound } from "./pages";
 
 class App extends Component {
   constructor(props) {
@@ -36,11 +35,18 @@ class App extends Component {
                 handleToggle={this.handleToggle}
               />
               <Routes>
-                {/* <Route path="/" element={<Navigate replace to="/sura" />} /> */}
-                <Route path="/" exact element={<Home />} />
+                <Route
+                  path="/"
+                  element={<Navigate replace to="/gradient-generator-react" />}
+                />
+                <Route
+                  path="/gradient-generator-react"
+                  exact
+                  element={<Home />}
+                />
                 <Route path="/button" element={<GradientButton />} exact />
 
-                <Route path="*" element={<Home />} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
             <Footer />

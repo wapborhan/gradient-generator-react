@@ -1,24 +1,16 @@
-import {
-  FaBookOpen,
-  FaBookReader,
-  FaBook,
-  FaCopy,
-  FaStopwatch,
-  FaMoon,
-  FaCalculator,
-} from "react-icons/fa";
+import { MdGradient, MdOutlineSmartButton } from "react-icons/md";
 // import { GiGoat } from "react-icons/gi";
 
 const sidenav = [
   {
-    path: "/gradient",
+    path: "/gradient-generator-react",
     tittle: "Gradients",
-    iconname: <FaBookOpen />,
+    iconname: <MdGradient />,
   },
   {
     path: "/button",
     tittle: "Button",
-    iconname: <FaCalculator />,
+    iconname: <MdOutlineSmartButton />,
   },
 ];
 
