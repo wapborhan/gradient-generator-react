@@ -25,7 +25,7 @@ const Color = (props) => {
             type="text"
             className="w-25"
             style={props.icolor1}
-            value={props.color1}
+            defaultValue={props.color1}
             onChange={(e) => props.setColor1(e.target.value)}
           />
         </div>
@@ -45,7 +45,7 @@ const Color = (props) => {
             type="text"
             className="w-25"
             style={props.icolor2}
-            value={props.color2}
+            defaultValue={props.color2}
             onChange={(e) => props.setColor2(e.target.value)}
           />
         </div>
