@@ -9,7 +9,7 @@ import Color from "./Color";
 import Code from "./Code";
 
 function Home() {
-  const [color1, setColor1] = useState("#FF6347");
+  const [color1, setColor1] = useState("#ff2600");
   const [color2, setColor2] = useState("#0000FF");
   const [direction, setDirection] = useState("linear-gradient");
   const [generated1, setGenerated1] = useState("");
@@ -31,12 +31,12 @@ function Home() {
       orientation +
       "," +
       color1 +
-      "," +
-      generated1 +
-      "," +
-      generated2 +
-      "," +
-      generated3 +
+      // "," +
+      // generated1 +
+      // "," +
+      // generated2 +
+      // "," +
+      // generated3 +
       "," +
       color2 +
       ")",
@@ -48,12 +48,12 @@ function Home() {
     "," +
     color1 +
     "," +
-    generated1 +
-    "," +
-    generated2 +
-    "," +
-    generated3 +
-    "," +
+    // generated1 +
+    // "," +
+    // generated2 +
+    // "," +
+    // generated3 +
+    // "," +
     color2 +
     ");";
 
@@ -77,13 +77,13 @@ function Home() {
 
   const generateColors = function () {
     if (chroma.valid(color1) && chroma.valid(color2)) {
-      let word = chroma.scale([color1, color2]).mode("lch").colors(5);
-      setGenerated1(word[1]);
-      setGenerated2(word[2]);
-      setGenerated3(word[3]);
+      // let word = chroma.scale([color1, color2]).mode("lch").colors(5);
+      // setGenerated1(word[1]);
+      // setGenerated2(word[2]);
+      // setGenerated3(word[3]);
 
-      setinvertedColor1(checkContrast(color1));
-      setinvertedColor2(checkContrast(color2));
+      // setinvertedColor1(checkContrast(color1));
+      // setinvertedColor2(checkContrast(color2));
 
       setError("");
     } else {
@@ -118,6 +118,13 @@ function Home() {
     setCopySuccess(alert("Copied"));
   }
 
+  const handleChangeColor1 = (event) => {
+    setColor1(event.target.value);
+  };
+  const handleChangeColor2 = (event) => {
+    setColor2(event.target.value);
+  };
+
   return (
     <div className="container-fluid topbarpt">
       <div className="card text-center">
@@ -129,10 +136,11 @@ function Home() {
                 error={error}
                 color1={color1}
                 icolor1={icolor1}
-                setColor1={setColor1}
+                handleChangeColor1={handleChangeColor1}
+                handleChangeColor2={handleChangeColor2}
                 color2={color2}
                 icolor2={icolor2}
-                setColor2={setColor2}
+                // setColor2={setColor2}
               />
             </div>
             <div className="col-8">
