@@ -11,3 +11,6 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 input[type="color"]::-webkit-color-swatch {
   border: none;
 }
+.gradientstop {
+  padding: 100px 0;
+}

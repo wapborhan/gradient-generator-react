@@ -121,7 +121,7 @@ function Home() {
   return (
     <div className="container-fluid topbarpt">
       <div className="card text-center">
-        <div className="card-header  topbarpt" style={ulStyle}></div>
+        <div className="card-header  gradientstop" style={ulStyle}></div>
         <div className="card-body">
           <div className="row">
             <div className="col-4">
