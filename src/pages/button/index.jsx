@@ -26,9 +26,9 @@ export default class index extends Component {
                     </button>
                   </div>
                   <div className="copy d-flex justify-content-end">
-                    <button className="btn btn-warning rounded-pill me-3 mb-3">
+                    {/* <button className="btn btn-warning rounded-pill me-3 mb-3">
                       COPY
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
