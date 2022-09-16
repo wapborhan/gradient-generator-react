@@ -14,7 +14,7 @@ export default class index extends Component {
             const code = item.code;
             return (
               <div className="col-md-3">
-                <div className="card">
+                <div className="card mt-3">
                   <div className="card-body">
                     <button
                       className="btn btnsr text-light w-100"

@@ -9,8 +9,8 @@ const Sidebar = (props) => {
       <div
         className={
           props.isActive
-            ? "sidebars bg-dark text-light  "
-            : "sidebars bg-dark text-light active"
+            ? "sidebars text-light  "
+            : "sidebars text-light active"
         }
       >
         <div className="logo-details">

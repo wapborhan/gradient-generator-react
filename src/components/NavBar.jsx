@@ -1,15 +1,23 @@
 import React, { Fragment } from "react";
-import { FaBars, FaUserCircle, FaAlignLeft } from "react-icons/fa";
+import {
+  FaBars,
+  FaFacebookSquare,
+  FaAlignLeft,
+  FaTwitterSquare,
+  FaLinkedin,
+  FaGithubSquare,
+  FaCodepen,
+} from "react-icons/fa";
 
 const NavBar = (props) => {
   return (
     <Fragment>
       <nav
         id="topbar"
-        className="topbar navbar navbar-expand navbar-light bg-white  mb-4 static-top shadow d-flex justify-content-between px-4"
+        className="topbar navbar navbar-expand navbar-light mb-4 static-top shadow d-flex justify-content-between px-4"
       >
         <div
-          className="sidebars-button text-dark mr-auto"
+          className="sidebars-button text-white mr-auto"
           onClick={props.handleToggle}
         >
           {props.isActive ? <FaBars /> : <FaAlignLeft />}
@@ -18,12 +26,27 @@ const NavBar = (props) => {
           </div>
         </div>
 
-        <h2 id="nameTitle" className="text-center text-dark">
+        <h2 id="nameTitle" className="text-center text-white">
           <span className="heabar"> CSS Gradient</span>{" "}
-          {/* <span className="headbn">দয়াময় মেহেরবান আল্লাহর নামে</span> */}
         </h2>
         <div className="account ">
-          <FaUserCircle />
+          <ul className="d-flex list-unstyled justify-content-around">
+            <li>
+              <FaFacebookSquare />
+            </li>
+            <li>
+              <FaTwitterSquare />
+            </li>
+            <li>
+              <FaLinkedin />
+            </li>
+            <li>
+              <FaGithubSquare />
+            </li>
+            <li>
+              <FaCodepen />
+            </li>
+          </ul>
         </div>
       </nav>
     </Fragment>

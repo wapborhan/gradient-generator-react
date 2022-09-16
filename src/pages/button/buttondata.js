@@ -24,6 +24,21 @@ const HOVER_BUTTON = [
     text: "HOVER ME",
     code: `linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%)`,
   },
+  {
+    id: 6,
+    text: "HOVER ME",
+    code: `linear-gradient(to right, #603813 0%, #b29f94  51%, #603813  100%)`,
+  },
+  {
+    id: 7,
+    text: "HOVER ME",
+    code: `linear-gradient(to right, #16A085 0%, #F4D03F  51%, #16A085  100%)`,
+  },
+  {
+    id: 8,
+    text: "HOVER ME",
+    code: `linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%)`,
+  },
 ];
 
 export default HOVER_BUTTON;

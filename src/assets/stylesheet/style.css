@@ -31,3 +31,25 @@ input[type="color"]::-webkit-color-swatch {
   color: #fff;
   text-decoration: none;
 }
+.sidebars {
+  background: linear-gradient(
+    to left,
+    rgb(43, 88, 118) 0%,
+    rgb(78, 67, 118) 100%
+  );
+}
+.topbar {
+  background: linear-gradient(
+    to right,
+    rgb(43, 88, 118) 0%,
+    rgb(78, 67, 118) 100%
+  );
+  color: #fff;
+}
+.sidebars .logo-details {
+  height: 60px !important;
+}
+.account ul li {
+  margin-right: 15px;
+  font-size: 20px;
+}
