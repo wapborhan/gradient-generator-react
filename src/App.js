@@ -6,7 +6,7 @@ import Sidebar from "./components/SideBar";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
-import { Home, GradientButton, NotFound } from "./pages";
+import { Home, GradientButton, Background, NotFound } from "./pages";
 
 class App extends Component {
   constructor(props) {
@@ -45,6 +45,7 @@ class App extends Component {
                   element={<Home />}
                 />
                 <Route path="/button" element={<GradientButton />} exact />
+                <Route path="/background" element={<Background />} exact />
 
                 <Route path="*" element={<NotFound />} />
               </Routes>

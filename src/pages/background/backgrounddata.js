@@ -1,13 +1,13 @@
-const HOVER_BUTTON = [
+const BACKGROUND_DATA = [
   {
     id: 1,
     text: "HOVER ME",
-    code: `linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%)`,
+    code: `linear-gradient(to right top, #2b5876 0%, #4e4376 51%)`,
   },
   {
     id: 2,
     text: "HOVER ME",
-    code: `linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%)`,
+    code: `linear-gradient(to right ,  #314755 0%, #26a0da 100%) `,
   },
   {
     id: 3,
@@ -134,11 +134,6 @@ const HOVER_BUTTON = [
     text: "HOVER ME",
     code: `linear-gradient(to right, #EB3349 0%, #ff7963  51%, #EB3349  100%)`,
   },
-  {
-    id: 28,
-    text: "HOVER ME",
-    code: `linear-gradient(to right, #1D976C 0%, #93F9B9  51%, #1D976C  100%)`,
-  },
 ];
 
-export default HOVER_BUTTON;
+export default BACKGROUND_DATA;

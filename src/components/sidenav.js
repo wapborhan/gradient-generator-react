@@ -1,5 +1,4 @@
-import { MdGradient, MdOutlineSmartButton } from "react-icons/md";
-// import { GiGoat } from "react-icons/gi";
+import { MdGradient, MdOutlineSmartButton, MdColorLens } from "react-icons/md";
 
 const sidenav = [
   {
@@ -11,6 +10,11 @@ const sidenav = [
     path: "/button",
     tittle: "Button",
     iconname: <MdOutlineSmartButton />,
+  },
+  {
+    path: "/background",
+    tittle: "Background",
+    iconname: <MdColorLens />,
   },
 ];
 

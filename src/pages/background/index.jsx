@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import HOVER_BUTTON from "./buttondata";
+import BACKGROUND_DATA from "./backgrounddata";
 
 export default class index extends Component {
   constructor(props) {
     super(props);
     this.textAreaRef = React.createRef();
     this.state = {
-      hoverButton: HOVER_BUTTON,
+      hoverButton: BACKGROUND_DATA,
       copySuccess: "",
     };
   }
@@ -28,17 +28,17 @@ export default class index extends Component {
           {this.state.hoverButton.map((item) => {
             const code = item.code;
             return (
-              <div className="col-md-3" key={item.id}>
+              <div className="col-md-4" key={item.id}>
                 <div className="card mt-3">
                   <div className="card-body">
-                    <button
-                      className="btn btnsr text-light w-100"
+                    <div
+                      className="backgroundsr text-light w-100"
                       style={{
                         background: `${item.code}`,
                       }}
                     >
-                      {item.text}
-                    </button>
+                      {/* {item.text} */}
+                    </div>
                   </div>
                   {/* <div className="copy d-flex justify-content-end">
                     <form>

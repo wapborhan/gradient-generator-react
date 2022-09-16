@@ -26,6 +26,9 @@ input[type="color"]::-webkit-color-swatch {
   border-radius: 10px;
   display: block;
 }
+.backgroundsr {
+  height: 200px;
+}
 .btnsr:hover {
   background-position: right center !important;
   color: #fff;
