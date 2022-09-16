@@ -10,6 +10,8 @@ A gradient generator seems fun. I do mostly use mycolors.space website to genera
 
 ![Gradient-Generator-image](./public/readme-image.png)
 
+![Gradient-Generator-image](./public/Screenshot%202022-09-11%20234630.png)
+
 The Gradient generator has options for changing the direction and the colors.  It takes to parameters of colors and generates 3 most related colors between them.
 
 
