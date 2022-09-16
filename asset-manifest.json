@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/gradient-generator-react/static/css/main.4d0a0f2d.css",
-    "main.js": "/gradient-generator-react/static/js/main.3f45aae5.js",
+    "main.css": "/gradient-generator-react/static/css/main.5515b5e4.css",
+    "main.js": "/gradient-generator-react/static/js/main.1d5414de.js",
     "static/js/787.781c584d.chunk.js": "/gradient-generator-react/static/js/787.781c584d.chunk.js",
     "static/media/radial.svg": "/gradient-generator-react/static/media/radial.743fc613fd9594f7fac7e26ada0b3345.svg",
     "index.html": "/gradient-generator-react/index.html",
     "static/media/arrow.svg": "/gradient-generator-react/static/media/arrow.7aaa277f04f523249a52b2ad83a413d4.svg",
-    "main.4d0a0f2d.css.map": "/gradient-generator-react/static/css/main.4d0a0f2d.css.map",
-    "main.3f45aae5.js.map": "/gradient-generator-react/static/js/main.3f45aae5.js.map",
+    "main.5515b5e4.css.map": "/gradient-generator-react/static/css/main.5515b5e4.css.map",
+    "main.1d5414de.js.map": "/gradient-generator-react/static/js/main.1d5414de.js.map",
     "787.781c584d.chunk.js.map": "/gradient-generator-react/static/js/787.781c584d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d0a0f2d.css",
-    "static/js/main.3f45aae5.js"
+    "static/css/main.5515b5e4.css",
+    "static/js/main.1d5414de.js"
   ]
 }
